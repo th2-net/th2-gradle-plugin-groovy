@@ -2,6 +2,7 @@ plugins {
     id 'com.exactpro.th2.kotlin-conventions'
     id 'java-library'
     id 'maven-publish'
+    id 'publish-plugin'
     id 'signing'
 }
 
@@ -85,4 +86,13 @@ signing {
     String signingPassword = findProperty("signingPassword")
     useInMemoryPgpKeys(signingKey, signingPassword)
     sign publishing.publications.mavenJava
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+        }
+    }
 }
