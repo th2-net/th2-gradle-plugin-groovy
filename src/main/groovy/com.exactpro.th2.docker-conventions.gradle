@@ -1,0 +1,23 @@
+plugins {
+    id 'com.exactpro.th2.kotlin-conventions'
+    id 'com.palantir.docker'
+    id 'application'
+}
+
+application {
+    mainClass.set(app_main_class)
+}
+
+applicationName = 'service'
+
+distTar {
+    archiveFileName.set("${applicationName}.tar")
+}
+
+dockerPrepare {
+    dependsOn distTar
+}
+
+docker {
+    copySpec.from(tarTree("$buildDir/distributions/${applicationName}.tar"))
+}

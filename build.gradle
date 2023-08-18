@@ -19,6 +19,7 @@ dependencies {
     implementation "org.owasp:dependency-check-gradle:8.3.1"
     implementation "com.github.jk1:gradle-license-report:2.5"
     implementation "de.undercouch:gradle-download-task:5.4.0"
+    implementation "com.palantir.gradle.docker:gradle-docker:0.25.0" //TODO: migrate to 0.35.0
 }
 
 java {
