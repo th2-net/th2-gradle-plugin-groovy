@@ -1,0 +1,6 @@
+plugins {
+    id 'com.exactpro.th2.dependencies-check-conventions'
+    id 'com.exactpro.th2.license-report-conventions'
+    id 'com.exactpro.th2.git-properties-conventions'
+    id 'com.exactpro.th2.kotlin-conventions'
+}
