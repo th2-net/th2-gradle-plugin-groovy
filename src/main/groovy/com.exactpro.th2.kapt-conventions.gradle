@@ -1,0 +1,9 @@
+plugins {
+    id 'org.jetbrains.kotlin.kapt'
+}
+
+dependencies {
+    compileOnly "com.google.auto.service:auto-service:1.1.1"
+    annotationProcessor "com.google.auto.service:auto-service:1.1.1"
+    kapt "com.google.auto.service:auto-service:1.1.1"
+}
