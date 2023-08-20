@@ -1,8 +1,8 @@
 plugins {
     id 'com.exactpro.th2.kotlin-conventions'
+    id 'io.github.gradle-nexus.publish-plugin'
     id 'java-library'
     id 'maven-publish'
-    id 'publish-plugin'
     id 'signing'
 }
 
